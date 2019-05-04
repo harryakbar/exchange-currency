@@ -1,11 +1,26 @@
 import React from 'react';
-import './App.css';
+import styled from 'styled-components';
+import Header from './components/Header';
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <Wrapper>
+      <Header
+        title="USD - United States Dollars"
+        currency="USD"
+        base="10.00"
+      />
+    </Wrapper>
   );
 }
 
 export default App;
+
+const Wrapper = styled.div`
+  width: 100%;
+  display: flex;
+
+  div {
+    display: flex;
+  }
+`;
