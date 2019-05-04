@@ -23,8 +23,7 @@ Header.propTypes = {
 export default Header;
 
 const Wrapper = styled.div`
-  width: 100%;
-  padding: 2rem;
+  padding: 1rem;
   flex-direction: column;
   border-bottom: 1px solid #000000;
 

@@ -8,7 +8,7 @@ export const currencies = {
     code: 'CAD',
   },
   IDR: {
-    currency: 'Rupiah',
+    currency: 'Indonesian Rupiah',
     code: 'IDR',
   },
   GBP: {
@@ -40,3 +40,34 @@ export const currencies = {
     code: 'KRW',
   },
 };
+
+export const SAMPLE_TARGET_CURRENCIES =[
+  {
+    code: 'IDR',
+    amount: 14000,
+  },
+  {
+    code: 'GBP',
+    amount: 120,
+  },
+  {
+    code: 'CHF',
+    amount: 14,
+  },
+  {
+    code: 'JPY',
+    amount: 14,
+  },
+  {
+    code: 'INR',
+    amount: 14,
+  },
+  {
+    code: 'MYR',
+    amount: 14,
+  },
+  {
+    code: 'CAD',
+    amount: 14,
+  },
+];
