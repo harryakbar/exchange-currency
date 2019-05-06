@@ -41,6 +41,19 @@ export const CURRENCIES = {
   },
 };
 
+export const CURRENCY_LIST = [
+  'USD',
+  'CAD',
+  'IDR',
+  'GBP',
+  'CHF',
+  'SGD',
+  'INR',
+  'MYR',
+  'JPY',
+  'KRW',
+];
+
 export const SAMPLE_TARGET_CURRENCIES =[
   {
     code: 'IDR',
