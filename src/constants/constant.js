@@ -42,7 +42,6 @@ export const CURRENCIES = {
 };
 
 export const CURRENCY_LIST = [
-  'USD',
   'CAD',
   'IDR',
   'GBP',

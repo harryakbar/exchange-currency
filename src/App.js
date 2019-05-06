@@ -1,21 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Header from './components/Header';
-import { CURRENCIES, CURRENCY_LIST } from './constants/constant';
+import { CURRENCIES } from './constants/constant';
 import CurrencyDetailCard from './components/CurrencyDetailCard';
 import { getUSDBaseCurrency } from './services/api';
+import AddCurrency from './components/AddCurrency';
 
 function App() {
   const [base] = useState(10.00);
   const [asyncData, setAsyncData] = useState(null);
-  const [targetCurrencies, setTargetCurrencies] = useState([]);
+
   const { code: USDCode, currency: USDcurrency } = CURRENCIES.USD;
 
-  useEffect(async () => {
-    const result = await getUSDBaseCurrency();
-    setAsyncData(result.data);
+  useEffect(() => {
+    async function fetchData() {
+      const response = await getUSDBaseCurrency();
+      setAsyncData(response.data);
+    }
+    fetchData();
   }, []);
 
+  const [targetCurrencies, setTargetCurrencies] = useState([]);
   const addTargetCurrency = (code) => {
     if(![...targetCurrencies].filter(currency => currency.code === code).length) {
       setTargetCurrencies([...targetCurrencies, {
@@ -46,18 +51,7 @@ function App() {
             deleteTargetCurrency={() => deleteTargetCurrency(currency.code)}
           />
         ))}
-        <label>
-          <select value={"Hai"} onChange={(event) => addTargetCurrency(event.target.value)}>
-            {CURRENCY_LIST.map(currencyOption => (
-              <option
-                key={CURRENCIES[currencyOption].code}
-                value={CURRENCIES[currencyOption].code}
-              >
-                {CURRENCIES[currencyOption].currency}
-              </option>
-            ))}
-          </select>
-        </label>
+        <AddCurrency onSubmit={addTargetCurrency} />
       </Content>
     </Wrapper>
   );
