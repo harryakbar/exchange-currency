@@ -1,4 +1,4 @@
-export const currencies = {
+export const CURRENCIES = {
   USD: {
     currency: 'United States Dollars',
     code: 'USD',

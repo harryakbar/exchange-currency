@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { currencies } from '../constants/constant';
+import { CURRENCIES } from '../constants/constant';
 
 function CurrencyDetailCard({ amount, code, currency, base, deleteTargetCurrency }) {
   const convertedAmount = amount * base;
-  const { code: USDCode } = currencies.USD;
+  const { code: USDCode } = CURRENCIES.USD;
 
   return (
     <Wrapper>
