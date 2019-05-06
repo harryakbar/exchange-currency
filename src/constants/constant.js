@@ -1,85 +1,65 @@
+const USD = 'USD';
+const CAD = 'CAD';
+const IDR = 'IDR';
+const GBP = 'GBP';
+const CHF = 'CHF';
+const SGD = 'SGD';
+const INR = 'INR';
+const MYR = 'MYR';
+const JPY = 'JPY';
+const KRW = 'KRW';
+
 export const CURRENCIES = {
   USD: {
     currency: 'United States Dollars',
-    code: 'USD',
+    code: USD,
   },
   CAD: {
     currency: 'Canadian Dollar',
-    code: 'CAD',
+    code: CAD,
   },
   IDR: {
     currency: 'Indonesian Rupiah',
-    code: 'IDR',
+    code: IDR,
   },
   GBP: {
     currency: 'Pound Sterling',
-    code: 'GBP',
+    code: GBP,
   },
   CHF: {
     currency: 'Swiss Franc',
-    code: 'CHF',
+    code: CHF,
   },
   SGD: {
     currency: 'Singapore Dollar',
-    code: 'SGD',
+    code: SGD,
   },
   INR: {
     currency: 'Indian Rupee',
-    code: 'INR',
+    code: INR,
   },
   MYR: {
     currency: 'Malaysian Ringgit',
-    code: 'MYR',
+    code: MYR,
   },
   JPY: {
     currency: 'Japan Yen',
-    code: 'JPY',
+    code: JPY,
   },
   KRW: {
     currency: 'Korean Won',
-    code: 'KRW',
+    code: KRW,
   },
 };
 
 export const CURRENCY_LIST = [
-  'CAD',
-  'IDR',
-  'GBP',
-  'CHF',
-  'SGD',
-  'INR',
-  'MYR',
-  'JPY',
-  'KRW',
-];
-
-export const SAMPLE_TARGET_CURRENCIES =[
-  {
-    code: 'IDR',
-    amount: 14000,
-  },
-  {
-    code: 'GBP',
-    amount: 120,
-  },
-  {
-    code: 'CHF',
-    amount: 14,
-  },
-  {
-    code: 'JPY',
-    amount: 14,
-  },
-  {
-    code: 'INR',
-    amount: 14,
-  },
-  {
-    code: 'MYR',
-    amount: 14,
-  },
-  {
-    code: 'CAD',
-    amount: 14,
-  },
+  CAD,
+  IDR,
+  GBP,
+  CHF,
+  SGD,
+  INR,
+  MYR,
+  JPY,
+  KRW,
 ];

@@ -22,7 +22,7 @@ function CurrencyDetailCard({ amount, code, currency, base, deleteTargetCurrency
         className="delete"
         onClick={deleteTargetCurrency}
       >
-        -
+        X
       </button>
     </Wrapper>
   );
@@ -46,11 +46,9 @@ const Wrapper = styled.div`
   .bold {
     font-weight: 700;
   }
-
   .italic {
     font-style: italic;
   }
-
   .detail {
     flex: 5;
     flex-direction: column;
@@ -64,9 +62,9 @@ const Wrapper = styled.div`
   .delete {
     flex: 1;
   }
-
   button {
     background: #a30c0c;
     color: #ffffff;
+    font-weight: 700;
   }
 `;

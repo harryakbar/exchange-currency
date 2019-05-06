@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+
 import Header from './components/Header';
-import { CURRENCIES } from './constants/constant';
-import CurrencyDetailCard from './components/CurrencyDetailCard';
-import { getUSDBaseCurrency } from './services/api';
 import AddCurrency from './components/AddCurrency';
+import CurrencyDetailCard from './components/CurrencyDetailCard';
+
+import { getUSDBaseCurrency } from './services/api';
+import { CURRENCIES } from './constants/constant';
 
 function App() {
   const [base] = useState(10.00);
   const [asyncData, setAsyncData] = useState(null);
+  const [targetCurrencies, setTargetCurrencies] = useState([]);
 
   const { code: USDCode, currency: USDcurrency } = CURRENCIES.USD;
 
@@ -19,8 +22,7 @@ function App() {
     }
     fetchData();
   }, []);
-
-  const [targetCurrencies, setTargetCurrencies] = useState([]);
+  
   const addTargetCurrency = (code) => {
     if(![...targetCurrencies].filter(currency => currency.code === code).length) {
       setTargetCurrencies([...targetCurrencies, {
