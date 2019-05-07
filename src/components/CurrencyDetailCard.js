@@ -12,10 +12,10 @@ function CurrencyDetailCard({ amount, code, currency, base, deleteTargetCurrency
       <div className="detail">
         <div className="row">
           <p>{code}</p>
-          <p>{convertedAmount}</p>
+          <p>{convertedAmount.toFixed(4)}</p>
         </div>
         <p className="bold italic">{`${code} - ${currency}`}</p>
-        <p className="italic">{`1 ${USDCode} = ${code} ${amount}`}</p>
+        <p className="italic">{`1 ${USDCode} = ${code} ${amount.toFixed(4)}`}</p>
       </div>
       <button
         data-testid="deleteTargetCurrency"

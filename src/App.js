@@ -40,7 +40,7 @@ function App() {
       <Header
         title={`${USDCode} - ${USDcurrency}`}
         currency={USDCode}
-        base={`${base}`}
+        base={`${base.toFixed(4)}`}
       />
       <Content>
         {targetCurrencies.map(currency => (
