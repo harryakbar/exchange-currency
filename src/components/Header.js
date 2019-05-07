@@ -30,4 +30,9 @@ const Wrapper = styled.div`
   .row {
     justify-content: space-between;
   }
+
+  h4,
+  h5 {
+    margin: 1rem;
+  }
 `;
