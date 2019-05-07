@@ -53,7 +53,7 @@ function App() {
             deleteTargetCurrency={() => deleteTargetCurrency(currency.code)}
           />
         ))}
-        <AddCurrency onSubmit={addTargetCurrency} />
+        {asyncData ? <AddCurrency onSubmit={addTargetCurrency} /> : "Loading"}
       </Content>
     </Wrapper>
   );

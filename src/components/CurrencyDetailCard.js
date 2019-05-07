@@ -18,7 +18,6 @@ function CurrencyDetailCard({ amount, code, currency, base, deleteTargetCurrency
         <p className="italic">{`1 ${USDCode} = ${code} ${amount.toFixed(4)}`}</p>
       </div>
       <button
-        data-testid="deleteTargetCurrency"
         className="delete"
         onClick={deleteTargetCurrency}
       >
